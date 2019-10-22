@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+    * {margin: 0; padding: 0;}
+    canvas {
+        max-width: 500px; background-color: red;
+    }
+    </style>
+</head>
+<body>
+<script src="../dist/index.js"></script>
+<script>
+var url = "./image.jpeg";
+//var url = "./image2.jpg";
+eSignature.loadImage(url, function(image) {
+    var eSign = new eSignature(image);
+    console.log(eSign);
+    eSignature.handleImage(image);
+}, function(error) {
+    console.error(error);
+});
+
+</script>
+</body>
+</html>
